@@ -1,6 +1,4 @@
-# Knowledge-Guided Interpretable Livestock Behavior Analysis
-
-### with Retrieval-Augmented Reasoning
+# Knowledge-Guided Interpretable Livestock Behavior Analysis with Retrieval-Augmented Reasoning
 
 ---
 
