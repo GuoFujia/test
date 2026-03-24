@@ -78,27 +78,84 @@ We introduce the **Fine-grained Livestock Behavior Explanation (FLBE)** dataset,
 
 ---
 
-## 📈 Results
+## 📈 Results (Behavior Recognition)
 
-### Behavior Recognition
+---
 
-| Model         | Pig Acc | Chicken Acc | Sheep Acc | Cow Acc |
-| ------------- | ------- | ----------- | --------- | ------- |
-| Qwen2.5-VL-3B | 0.5675  | 0.3687      | 0.4413    | 0.6755  |
-| + Ours        | 0.5865  | 0.8090      | 0.8430    | 0.7529  |
-| Qwen3-VL-2B   | 0.5715  | 0.3920      | 0.4581    | 0.6845  |
-| + Ours        | 0.6126  | 0.8253      | 0.8682    | 0.7757  |
+### 🐷 Pig
 
-### Explanation Quality
+| Method         | Acc    | Prec   | Rec    |
+| -------------- | ------ | ------ | ------ |
+| GPT-5          | 0.6338 | 0.6191 | 0.6073 |
+| Gemini 3.0 Pro | 0.5926 | 0.5781 | 0.5587 |
+| Qwen2.5-VL-3B  | 0.5675 | 0.2886 | 0.5181 |
+| + Ours         | 0.5865 | 0.5456 | 0.5275 |
+| Qwen3-VL-2B    | 0.5715 | 0.2814 | 0.5347 |
+| + Ours         | 0.6126 | 0.5781 | 0.5569 |
+| LLaVA-1.5-7B   | 0.6659 | 0.3553 | 0.6471 |
+| + Ours         | 0.6892 | 0.5214 | 0.5275 |
+| InternVL3-2B   | 0.6059 | 0.3127 | 0.5634 |
+| + Ours         | 0.6321 | 0.5712 | 0.5856 |
+
+---
+
+### 🐔 Chicken
+
+| Method         | Acc    | Prec   | Rec    |
+| -------------- | ------ | ------ | ------ |
+| GPT-5          | 0.3849 | 0.2865 | 0.2867 |
+| Gemini 3.0 Pro | 0.4166 | 0.3174 | 0.2874 |
+| Qwen2.5-VL-3B  | 0.3687 | 0.2261 | 0.3686 |
+| + Ours         | 0.8090 | 0.4439 | 0.8069 |
+| Qwen3-VL-2B    | 0.3920 | 0.2452 | 0.4013 |
+| + Ours         | 0.8253 | 0.4717 | 0.8283 |
+| LLaVA-1.5-7B   | 0.2618 | 0.1339 | 0.2618 |
+| + Ours         | 0.7792 | 0.4182 | 0.7264 |
+| InternVL3-2B   | 0.3618 | 0.2079 | 0.3386 |
+| + Ours         | 0.8068 | 0.4615 | 0.8037 |
+
+---
+
+### 🐑 Sheep
+
+| Method         | Acc    | Prec   | Rec    |
+| -------------- | ------ | ------ | ------ |
+| GPT-5          | 0.6634 | 0.5185 | 0.4402 |
+| Gemini 3.0 Pro | 0.6763 | 0.4719 | 0.3990 |
+| Qwen2.5-VL-3B  | 0.4413 | 0.3087 | 0.3928 |
+| + Ours         | 0.8430 | 0.8271 | 0.7533 |
+| Qwen3-VL-2B    | 0.4581 | 0.3159 | 0.4223 |
+| + Ours         | 0.8682 | 0.8525 | 0.7816 |
+| LLaVA-1.5-7B   | 0.3717 | 0.2145 | 0.3236 |
+| + Ours         | 0.8035 | 0.7383 | 0.6954 |
+| InternVL3-2B   | 0.4545 | 0.3294 | 0.4198 |
+| + Ours         | 0.8645 | 0.8413 | 0.7768 |
+
+---
+
+### 🐄 Cow
+
+| Method         | Acc    | Prec   | Rec    |
+| -------------- | ------ | ------ | ------ |
+| GPT-5          | 0.6725 | 0.5716 | 0.5936 |
+| Gemini 3.0 Pro | 0.6395 | 0.6881 | 0.6155 |
+| Qwen2.5-VL-3B  | 0.6755 | 0.4162 | 0.6352 |
+| + Ours         | 0.7529 | 0.5960 | 0.6745 |
+| Qwen3-VL-2B    | 0.6845 | 0.4286 | 0.6494 |
+| + Ours         | 0.7757 | 0.6158 | 0.6893 |
+| LLaVA-1.5-7B   | 0.5824 | 0.3185 | 0.5419 |
+| + Ours         | 0.7872 | 0.6142 | 0.6638 |
+| InternVL3-2B   | 0.7186 | 0.4871 | 0.6732 |
+| + Ours         | 0.7969 | 0.6294 | 0.7021 |
+
+---
+
+## 📊 Explanation Quality
 
 | Model         | Pig (NLI) | Chicken (NLI) | Sheep (NLI) | Cow (NLI) |
 | ------------- | --------- | ------------- | ----------- | --------- |
 | Qwen2.5-VL-3B | 44.36     | 28.15         | 33.86       | 32.70     |
 | + Ours        | 50.81     | 36.67         | 45.02       | 39.87     |
-
-👉 Our method consistently improves both **recognition accuracy** and **explanation quality** across all datasets.
-
-For full results, please refer to our paper.
 
 ---
 
@@ -143,4 +200,4 @@ Compared to baseline models, our method generates:
 
 ## ⭐ Acknowledgement
 
-This project is developed for advancing **interpretable AI in precision livestock farming**.
+This project aims to advance **interpretable AI for precision livestock farming**.
